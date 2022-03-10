@@ -1,3 +1,5 @@
+//Faster alternative to find inverse of a squareroot :: Original -> Quake 3 Source
+
 #include <iostream>;
 
 float firstFast(float x);
@@ -5,7 +7,7 @@ float firstFast(float x);
 int main()
 {
     int myNum = 456;
-    
+
     std::cout << "InvSqrt of myNum is " <<  firstFast(myNum) << std::endl;
 }
 
@@ -30,4 +32,6 @@ float firstFast(float myFloat)
 
     //Math method for almost accurate approximations
     myFloat = myFloat * ( 1.5f - halfFloat * myFloat *myFloat );
+
+    return myFloat;
 }
