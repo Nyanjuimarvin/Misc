@@ -4,8 +4,9 @@ float firstFast(float x);
 
 int main()
 {
-
-    std::cout << "Hello" << std::endl;
+    int myNum = 456;
+    
+    std::cout << "InvSqrt of myNum is " <<  firstFast(myNum) << std::endl;
 }
 
 // Calculate f(x) = 1/sqrt x;
@@ -26,4 +27,7 @@ float firstFast(float myFloat)
     // cast address of temp to floatPtr and dereference
     //temp is now an approximation of the invsqrt of myFloat
     myFloat = *(float *)&temp; // Bits
+
+    //Math method for almost accurate approximations
+    myFloat = myFloat * ( 1.5f - halfFloat * myFloat *myFloat );
 }
